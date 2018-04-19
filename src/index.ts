@@ -145,7 +145,6 @@ class CookieUtil {
     before() {
         var self = this;
         return function(ctx, next) {
-            console.log('aaaa');
             if(ctx.cookie) {
                 return next();
             }
