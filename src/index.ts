@@ -148,7 +148,7 @@ class CookieUtil {
             if(ctx.cookie) {
                 return next();
             }
-            let cookies = self.parse(ctx.req.headers.cookie);
+            let cookies = self.parse(ctx.req.headers.cookie || "");
             ctx.cookie = new Cookie(cookies);
             next();
         }
